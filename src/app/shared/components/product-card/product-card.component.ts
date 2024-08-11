@@ -1,5 +1,5 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { ProductType } from 'src/types/product.type';
+import { ProductType } from '../../../../types/product.type';
 import { CartProductService } from '../../services/cart-product.service';
 import { TitleComponent } from '../title/title.component';
 

@@ -1,9 +1,9 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Observable, Subject, Subscription, from, map } from 'rxjs';
-import { PopupComponent } from 'src/app/shared/components/popup/popup.component';
-import { CartService } from 'src/app/shared/services/cart.service';
-import { environment } from 'src/environments/environment';
+import { PopupComponent } from '../../../../app/shared/components/popup/popup.component';
+import { CartService } from '../../../../app/shared/services/cart.service';
+import { environment } from '../../../../environments/environment';
 
 //declare var bootstrap: any; //если подключаем без typing
 //import * as bootstrap from "bootstrap";

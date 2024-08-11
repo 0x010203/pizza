@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { PopupComponent } from 'src/app/shared/components/popup/popup.component';
+import { PopupComponent } from '../../../../app/shared/components/popup/popup.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({

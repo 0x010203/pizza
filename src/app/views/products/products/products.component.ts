@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CartService } from 'src/app/shared/services/cart.service';
-import { ProductService } from 'src/app/shared/services/product.service';
+import { CartService } from '../../../../app/shared/services/cart.service';
+import { ProductService } from '../../../../app/shared/services/product.service';
 import { catchError, map, of, retry, tap } from 'rxjs';
-import { ProductType } from 'src/types/product.type';
+import { ProductType } from '../../../../types/product.type';
 
 @Component({
   selector: 'app-products',

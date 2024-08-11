@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { OrderComponent } from './order.component';
-import { AuthGuard } from 'src/app/core/auth/auth.guard';
+import { AuthGuard } from '../../../app/core/auth/auth.guard';
 
 const routes: Routes = [
   //{path: 'order', component: OrderComponent, canActivate: [AuthGuard]},
