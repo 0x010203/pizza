@@ -1,0 +1,53 @@
+<!-- <div class="product" *isChicken="product.description"> -->
+
+
+  <!-- <div *ngIf="product.image; then productImageBlock else defaultImageBlock"></div> -->
+<div class="product">
+  
+  
+  <ng-template [ngIf]="product.image">
+    <div class="product-image" >
+      <!-- <img [src]="'assets/images/'+ product.image"> -->
+      <img [src]="product.image">
+    </div>
+  </ng-template>
+
+  <!-- <ng-template #productImageBlock>
+    <div class="product-image" >
+      <img [src]="'assets/images/'+ product.image">
+    </div>
+  </ng-template> -->
+
+  <!-- <div class="product-image" *ngIf="product.image; else defaultImageBlock">
+    <img [src]="'assets/images/'+ product.image">
+  </div> -->
+
+
+  <!-- <div class="product-image" *ngIf="!product.image">
+    <img [src]="'assets/images/pizzzzza.png'">
+  </div> -->
+
+  <ng-template #defaultImageBlock>
+    <div class="product-image">
+      <img [src]="'assets/images/pizzzzza.png'">
+    </div>
+  </ng-template>
+  
+  <!-- <div class="product-title">{{product.title}}</div> -->
+  <!-- <custom-title [title]="product.title" #customTitle></custom-title> -->
+  <custom-title [title]="product.title | uppercase">     </custom-title>
+  <!-- <div class="product-text">{{product.description | wordUpper: 'сыр': 'томат'}} </div> -->
+  <div class="product-text">{{product.description | wordUpper: ['сыр', 'томат', 'колбас']}} </div>
+  <div class="product-action" #elem>
+    <!-- <button class="btn btn-add-to-cart" (click)="addProductToCart()">В корзину</button> -->
+    <a class="btn btn-add-to-cart" routerLink="/order" [queryParams]="{product: product.title}">В корзину</a>
+    <a class="btn btn-white" [routerLink]="['/products', product.id]">Подробнее</a>
+    <!-- <button class="btn btn-add-to-cart" (click)="addProductToCart(customTitle.toUpper())">В корзину</button> -->
+  </div>
+  <!-- <div>{{product.datetime | date: 'dd.MM.yyyy HH:mm'}}</div> -->
+  <!-- <div>{{product.datetime | date: 'full' | uppercase}}</div> -->
+   <!-- <div>{{cartProductService.getCommonCount()}}</div> -->
+</div>
+
+
+<!-- (click)="addToCart(product, orderElement)" -->
